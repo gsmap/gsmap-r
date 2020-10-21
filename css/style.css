@@ -1,0 +1,10 @@
+html, body, #map {
+    height:100vh
+}
+body {
+  margin: 0px;
+}
+.awesome-marker svg {
+	font-size: 18px;
+	margin-top: 8px
+}
