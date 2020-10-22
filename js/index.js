@@ -24,30 +24,57 @@ L.TileLayer.T = L.TileLayer.extend({
 	},
 	reuseTiles: true
 });
+/*
+L.TileLayer.T = L.TileLayer.extend({
+	getTileUrl: function (coords) {
+	return `tiles/${coords.z}/${coords.x}_${coords.y}.webp`;
+	},
+	reuseTiles: true
+});
+*/
 L.tileLayer.t = function () {
-return new L.TileLayer.T();
-}
+	return new L.TileLayer.T()
+};
 map.addLayer(L.tileLayer.t());
-
 fetch("js/coord.json").then(response => response.json()
 	.then(table => {
 		raw =  table,data = table.data
-		drawlayer("바람신의 눈","bahai","green")
+		drawlayer("anemoculus","bahai","green")
 	})
 );
 function drawlayer(category,symbol,color) {
 	for (const e in data[category]) {
 		var id = data[category][e].id,
 			coord_x = data[category][e].geometry.coordinates[0],
-			coord_y = data[category][e].geometry.coordinates[1]
-		console.log(coord_y)
+			coord_y = data[category][e].geometry.coordinates[1],
+			cache = `${category}_${id}`,opacity = "";
+		if (localStorage[cache]) {
+			opacity = "op-50"
+		}
 		L.marker(
 			[coord_x, coord_y],
 			{icon: L.AwesomeMarkers.icon({
 				icon: symbol,
 				markerColor: color,
-				className: `awesome-marker mark_${category}_${id}`
+				className:`awesome-marker ${category}_${id} ${opacity}`
 			})}
-		).addTo(map).bindPopup(`${category} - ${id}`)
+		).addTo(map).bindPopup(`
+		<label class="switch">
+			<input type="checkbox">
+			<span class="slider"></span>
+		</label>
+		`)
 	}
-}
+};
+var marker,switch_c;
+map.on("popupopen", function (e) {
+	e.target._popup._container.querySelector("input").addEventListener("click",()=>{
+		var id = e.popup._source._icon.classList[2];
+		e.popup._source._icon.classList.toggle("op-50")
+		if (localStorage[id]){
+			localStorage.removeItem("anemoculus_1")
+		} else {
+			localStorage[id] = true
+		}
+	});
+})
