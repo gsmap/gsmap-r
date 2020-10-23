@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 	<title>원신지도R</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -12,10 +14,29 @@
 
 <body>
 	<div id="map"></div>
-	<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/all.js"></script>
+	<div id="Sidenav" class="sidenav">
+		<a href="#">gsmap-r</a>
+		<div class="icon">
+			<label class="container">
+				<input class="icon_checkbox" type="checkbox" data-icon="anemoculus_bahai_green">
+				<i class="fas fa-bahai" style="color:aqua"></i>
+				<span class="checkmark"></span>
+				<span style="color: aqua;">바람신의 눈동자</span>
+			</label>
+			<label class="container">
+				<input class="icon_checkbox" type="checkbox" data-icon="geoculus_bahai_darkgreen">
+				<i class="fas fa-bahai" style="color:BurlyWood"></i>
+				<span class="checkmark"></span>
+				<span style="color: BurlyWood;">바위신의 눈동자</span>
+			</label>
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-control-custom@1.0.0/Leaflet.Control.Custom.min.js"></script>
 	<script src="js/awesomemarkers.js"></script>
 	<script src="js/index.js"></script>
 </body>
+
 </html>
