@@ -7,34 +7,101 @@
 	<title>원신지도R</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/css/leaflet-sidebar.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<div id="map"></div>
-	<div id="Sidenav" class="sidenav">
-		<a href="#">gsmap-r</a>
-		<div class="icon">
-			<label class="container">
-				<input class="icon_checkbox" type="checkbox" data-icon="anemoculus_bahai_green">
-				<i class="fas fa-bahai" style="color:aqua"></i>
-				<span class="checkmark"></span>
-				<span style="color: aqua;">바람신의 눈동자</span>
-			</label>
-			<label class="container">
-				<input class="icon_checkbox" type="checkbox" data-icon="geoculus_bahai_darkgreen">
-				<i class="fas fa-bahai" style="color:BurlyWood"></i>
-				<span class="checkmark"></span>
-				<span style="color: BurlyWood;">바위신의 눈동자</span>
-			</label>
+
+	<div id="sidebar" class="leaflet-sidebar collapsed">
+		<!-- Nav tabs -->
+		<div class="leaflet-sidebar-tabs">
+			<ul role="tablist">
+				<!-- top aligned tabs -->
+				<li><a href="#home" role="tab"><i class="fa fa-bahai"></i></a></li>
+				<li><a href="#chest" role="tab"><i class="fa fa-box"></i></a></li>
+				<li class="disabled"><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
+			</ul>
+
+			<ul role="tablist">
+				<!-- bottom aligned tabs -->
+				<li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+			</ul>
+		</div>
+
+		<!-- Tab panes -->
+		<div class="leaflet-sidebar-content">
+			<div class="leaflet-sidebar-pane" id="home">
+				<h1 class="leaflet-sidebar-header">
+					sidebar
+					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+				</h1>
+				<div class="icon">
+					<div class="anemoculus checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon_checkbox" type="checkbox" data-icon="anemoculus_bahai_green">
+							<i class="fas fa-bahai" style="color:aqua"></i>
+							<span class="checkmark"></span>
+							<span>바람신의 눈동자</span>
+							<label id="anemoculus_current">0</label>/<label id="anemoculus_max"></label>
+						</label>
+						<div class="anemoculus_option" >
+							<!-- <label id="anemoculus_current">All</label> / <label id="anemoculus_max">Clear</label> -->
+						</div>
+					</div>
+					<div class="geoculus checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon_checkbox" type="checkbox" data-icon="geoculus_bahai_darkgreen">
+							<i class="fas fa-bahai" style="color:BurlyWood"></i>
+							<span class="checkmark"></span>
+							<span>바위신의 눈동자</span>
+							<label id="geoculus_current">0</label>/<label id="geoculus_max"></label>
+						</label>
+						<div class="geoculus_option"></div>
+					</div>
+				</div>
+			</div>
+			<div class="leaflet-sidebar-pane" id="chest">
+				<h1 class="leaflet-sidebar-header">
+					chest
+					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+				</h1>
+				<div class="icon">
+					<div class="shrine checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon_checkbox" type="checkbox" data-icon="mond-shrine_box_red">
+							<i class="fas fa-box" style="color:white"></i>
+							<span class="checkmark"></span>
+							<span>몬드 - 지령감실</span>
+							<label id="mond-shrine_current">0</label>/<label id="mond-shrine_max"></label>
+						</label>
+						<div class="mond-shrine_option" >
+							<!-- <label id="anemoculus_current">All</label> / <label id="anemoculus_max">Clear</label> -->
+						</div>
+					</div>
+					<div class="shrine checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon_checkbox" type="checkbox" data-icon="liyue-shrine_box_red">
+							<i class="fas fa-box" style="color:white"></i>
+							<span class="checkmark"></span>
+							<span>리월 - 지령감실</span>
+							<label id="liyue-shrine_current">0</label>/<label id="liyue-shrine_max"></label>
+						</label>
+						<div class="liyue-shrine_option" >
+							<!-- <label id="anemoculus_current">All</label> / <label id="anemoculus_max">Clear</label> -->
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-
 	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/leaflet-control-custom@1.0.0/Leaflet.Control.Custom.min.js"></script>
 	<script src="js/awesomemarkers.js"></script>
 	<script src="js/index.js"></script>
 </body>

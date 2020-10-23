@@ -1,4 +1,5 @@
 t = L.latLngBounds([0, 0], [-66.5, 90]);
+
 var raw, data, map = L.map("map", {
 	center: [-35, 45],
 	zoomDelta: 0.5,
@@ -13,6 +14,14 @@ var raw, data, map = L.map("map", {
 		position: 'topleft'
 	}
 });
+
+var sidebar = L.control.sidebar({
+	autopan: false,       // whether to maintain the centered map point when opening the sidebar
+	closeButton: true,    // whether t add a close button to the panes
+	container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
+	position: 'left',     // left or right
+}).addTo(map);
+
 L.control.attribution({
 	prefix: "<a href='https://github.com/gsmap/gsmap-r' target='_blank'>github</a>"
 }).addTo(map);
@@ -27,13 +36,26 @@ L.TileLayer.T = L.TileLayer.extend({
 	},
 	reuseTiles: true
 });
+
 L.tileLayer.t = function () {
 	return new L.TileLayer.T()
 };
+
 map.addLayer(L.tileLayer.t());
 fetch("js/coord.json").then(response => response.json()
 	.then(table => {
-		raw = table, data = table.data
+		raw = table, data = table.data, doc = document
+		for (const e in data) {
+			var length = data[e].length,
+			get=0;
+			document.getElementById(`${e}_max`).innerHTML = length
+			for (let index = 0; index < length; index++) {
+				if (localStorage[`${e}_${index}`]) {
+					get++
+				}
+			};
+			document.getElementById(`${e}_current`).innerHTML = get
+		}
 	})
 );
 
@@ -51,12 +73,13 @@ function icon_toggle() {
 };
 
 function draw_icon(category, symbol, color, state) {
+	var obj = data[category], marker = [];
 	if (!this[`${category}_mark`]) {
 		this[`${category}_mark`] = L.layerGroup().addTo(map);
-		for (const e in data[category]) {
-			var id = data[category][e].id,
-				coord_x = data[category][e].geometry.coordinates[0],
-				coord_y = data[category][e].geometry.coordinates[1],
+		for (const e in obj) {
+			var id = obj[e].id,
+				coord_x = obj[e].geometry.coordinates[0],
+				coord_y = obj[e].geometry.coordinates[1],
 				cache = `${category}_${id}`, opacity = "";
 			if (localStorage[cache]) {
 				opacity = "op-50"
@@ -93,7 +116,8 @@ function draw_icon(category, symbol, color, state) {
 };
 
 map.on("popupopen", function (e) {
-	var id = e.popup._source._icon.classList[2];
+	var id = e.popup._source._icon.classList[2],
+	category = id.split("_")[0];
 	if (localStorage[id]) {
 		e.target._popup._container.querySelector("input").checked = true
 	};
@@ -101,43 +125,10 @@ map.on("popupopen", function (e) {
 		e.popup._source._icon.classList.toggle("op-50");
 		if (localStorage[id]) {
 			localStorage.removeItem(id)
+			document.getElementById(`${category}_current`).innerHTML--
 		} else {
 			localStorage[id] = true
+			document.getElementById(`${category}_current`).innerHTML++
 		}
 	});
-})
-
-L.control.custom({
-	position: 'topright',
-	content: '<button type="button" class="btn btn-default">' +
-		'	<i class="fa fa-crosshairs"></i>' +
-		'</button>',
-	classes: '',
-	id: "",
-	title: "",
-	style:
-	{
-		margin: '10px',
-		padding: '0px 0 0 0',
-		cursor: 'pointer',
-	},
-	datas:
-	{
-
-	},
-	events:
-	{
-		click: function (data) {
-			if (document.getElementById("Sidenav").style.width == "250px") {
-				document.getElementById("Sidenav").style.width = "0px"
-			} else {
-				document.getElementById("Sidenav").style.width = "250px"
-			}
-		},
-		dblclick: function (data) {
-		},
-		contextmenu: function (data) {
-		},
-	}
-})
-	.addTo(map);
+});
