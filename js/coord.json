@@ -2516,6 +2516,163 @@
 					]
 				}
 			}
+		],
+		"puzzle_ballon": [
+			{
+				"id": 1,
+				"geometry": {
+					"coordinates": [
+						-18.0466,72.2571
+					]
+				}
+			},
+			{
+				"id": 2,
+				"geometry": {
+					"coordinates": [
+						-16.9202,67.9395
+					]
+				}
+			},
+			{
+				"id": 3,
+				"geometry": {
+					"coordinates": [
+						-23.4935,67.9779
+					]
+				}
+			},
+			{
+				"id": 4,
+				"geometry": {
+					"coordinates": [
+						-28.4639,63.5065
+					]
+				}
+			},
+			{
+				"id": 5,
+				"geometry": {
+					"coordinates": [
+						-31.3958,67.0001
+					]
+				}
+			},
+			{
+				"id": 6,
+				"geometry": {
+					"coordinates": [
+						-20.4219,50.2899
+					]
+				}
+			},
+			{
+				"id": 7,
+				"geometry": {
+					"coordinates": [
+						-25.2199,48.6310
+					]
+				}
+			},
+			{
+				"id": 8,
+				"geometry": {
+					"coordinates": [
+						-34.7416,27.3834
+					]
+				}
+			},
+			{
+				"id": 9,
+				"geometry": {
+					"coordinates": [
+						-35.9068,26.2848
+					]
+				}
+			},
+			{
+				"id": 10,
+				"geometry": {
+					"coordinates": [
+						-49.4467,24.6533
+					]
+				}
+			}
+		],
+		"puzzle_pinwheel": [
+			{
+				"id": 1,
+				"geometry": {
+					"coordinates": [
+						-50.1663,57.4146
+					]
+				}
+			},
+			{
+				"id": 2,
+				"geometry": {
+					"coordinates": [
+						-54.4637,56.2445
+					]
+				}
+			},
+			{
+				"id": 3,
+				"geometry": {
+					"coordinates": [
+						-47.7319,48.8947
+					]
+				}
+			},
+			{
+				"id": 4,
+				"geometry": {
+					"coordinates": [
+						-39.3640,43.1433
+					]
+				}
+			},
+			{
+				"id": 5,
+				"geometry": {
+					"coordinates": [
+						-41.7918,20.8630
+					]
+				}
+			},
+			{
+				"id": 6,
+				"geometry": {
+					"coordinates": [
+						-42.6703,40.7648
+					]
+				}
+			},
+			{
+				"id": 7,
+				"geometry": {
+					"coordinates": [
+						-49.3716,42.7533
+					]
+				}
+			},
+			{
+				"id": 8,
+				"geometry": {
+					"coordinates": [
+						-46.9840,38.0292
+					]
+				}
+			},
+			{
+				"id": 9,
+				"geometry": {
+					"coordinates": [
+						-52.8260,55.2338
+					]
+				}
+			}
+			
 		]
 	}
 }
