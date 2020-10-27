@@ -47,10 +47,10 @@ fetch("js/coord.json").then(response => response.json()
 		raw = table, data = table.data, doc = document
 		for (const e in data) {
 			var l = data[e].length,
-			get=0;
+				get = 0;
 			doc.getElementById(`${e}-max`).innerHTML = l
 			for (let i = 0; i < l; i++) {
-				if (localStorage[`${e}-${i}`]) {
+				if (localStorage[`${e}-${i+1}`]) {
 					get++
 				}
 			};
@@ -78,12 +78,16 @@ function draw_icon(category, symbol, color, state) {
 		this[`${category}-mark`] = L.layerGroup().addTo(map);
 		for (const e in obj) {
 			var id = obj[e].id,
-				coord_x = obj[e].geometry.coordinates[0],
-				coord_y = obj[e].geometry.coordinates[1],
-				cache = `${category}-${id}`, opacity = "";
+				coord_x = obj[e].coordinates[0],
+				coord_y = obj[e].coordinates[1],
+				cache = `${category}-${id}`, opacity = "", content = "";
 			if (localStorage[cache]) {
 				opacity = "op-50"
 			};
+			if (obj[e].title) {
+				cache = obj[e].title,
+				content = obj[e].content
+			}
 			L.marker(
 				[coord_x, coord_y],
 				{
@@ -99,8 +103,9 @@ function draw_icon(category, symbol, color, state) {
 					})
 				}
 			).bindPopup(
-				`${cache}` +
+				`<h1 class="popup-header">${cache}</h1>` +
 				`<br>` +
+				`<div class="popup-content">${content}</div>` +
 				`<label class="switch">` +
 				`	<input type="checkbox">` +
 				`	<span class="slider"></span>` +
@@ -117,7 +122,7 @@ function draw_icon(category, symbol, color, state) {
 
 map.on("popupopen", function (e) {
 	var id = e.popup._source._icon.classList[2],
-	category = id.split("-")[0];
+		category = id.split("-")[0];
 	if (localStorage[id]) {
 		e.target._popup._container.querySelector("input").checked = true
 	};

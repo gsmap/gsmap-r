@@ -75,3 +75,17 @@ input:checked + .slider:before {
 .leaflet-sidebar-content {
 	background-color: #000 !important;
 }
+
+.leaflet-popup-content-wrapper {
+	border-radius: 0px !important
+}
+
+.popup-header {
+	margin: -20px -20px 0;
+	height: 40px;
+	padding: 0 20px;
+	line-height: 40px;
+	font-size: 2em;
+	color: #fff;
+	background-color: #0074d9;
+}

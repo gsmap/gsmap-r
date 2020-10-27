@@ -24,6 +24,7 @@
 				<li><a href="#home" role="tab"><i class="fa fa-bahai"></i></a></li>
 				<li><a href="#chest" role="tab"><i class="fa fa-box"></i></a></li>
 				<li><a href="#puzzle" role="tab"><i class="fa fa-puzzle-piece"></i></a></li>
+				<li><a href="#collection" role="tab"><i class="fa fa-book"></i></a></li>
 			</ul>
 
 			<ul role="tablist">
@@ -34,7 +35,7 @@
 		<div class="leaflet-sidebar-content">
 			<div class="leaflet-sidebar-pane" id="home">
 				<h1 class="leaflet-sidebar-header">
-					sidebar
+					culus
 					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
 				</h1>
 				<div class="icon">
@@ -122,11 +123,11 @@
 			</div>
 			<div class="leaflet-sidebar-pane" id="puzzle">
 				<h1 class="leaflet-sidebar-header">
-					totem
+					puzzle
 					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
 				</h1>
 				<div class="icon">
-					<div class="puzzle_ballon checkbox" checkbox">
+					<div class="puzzle_ballon checkbox">
 						<label class="container" style="width: 100%">
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_ballon-feather-lightblue">
 							<i class="fas fa-feather" style="color:aqua"></i>
@@ -138,7 +139,7 @@
 							<!-- <label id="anemoculus-current">All</label> / <label id="anemoculus-max">Clear</label> -->
 						</div>
 					</div>
-					<div class="puzzle_pinwheel checkbox" checkbox">
+					<div class="puzzle_pinwheel checkbox">
 						<label class="container" style="width: 100%">
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_pinwheel-feather-darkgreen">
 							<i class="fas fa-wind" style="color:aqua"></i>
@@ -152,12 +153,30 @@
 					</div>
 				</div>
 			</div>
+			<div class="leaflet-sidebar-pane" id="collection">
+				<h1 class="leaflet-sidebar-header">
+					collection
+					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+				</h1>
+				<div class="icon">
+					<div class="collection_book checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="collection_book-book-purple">
+							<i class="fas fa-book" style="color:purple"></i>
+							<span class="checkmark"></span>
+							<span>책</span>
+							<label id="collection_book-current">0</label>/<label id="collection_book-max"></label>
+						</label>
+						<div class="collection_book-option">
+							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
-		<link rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/leaflet-coordinates-control@1.0.2/src/L.Control.Coordinates.min.css">
 		<script src="js/awesomemarkers.js"></script>
 		<script src="js/index.js"></script>
 </body>
