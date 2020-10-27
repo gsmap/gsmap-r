@@ -2109,6 +2109,413 @@
 					]
 				}
 			}
+		],
+		"liyue_challenge": [
+			{
+				"id": 1,
+				"geometry": {
+					"coordinates": [
+						-33.2295,
+						42.7478
+					]
+				}
+			},
+			{
+				"id": 2,
+				"geometry": {
+					"coordinates": [
+						-37.6621,
+						42.3468
+					]
+				}
+			},
+			{
+				"id": 3,
+				"geometry": {
+					"coordinates": [
+						-38.0005,
+						48.2574
+					]
+				}
+			},
+			{
+				"id": 4,
+				"geometry": {
+					"coordinates": [
+						-38.7198,
+						44.4012
+					]
+				}
+			},
+			{
+				"id": 5,
+				"geometry": {
+					"coordinates": [
+						-44.3278,
+						50.9875
+					]
+				}
+			},
+			{
+				"id": 6,
+				"geometry": {
+					"coordinates": [
+						-44.2963,
+						46.9501
+					]
+				}
+			},
+			{
+				"id": 7,
+				"geometry": {
+					"coordinates": [
+						-47.1000,
+						51.6522
+					]
+				}
+			},
+			{
+				"id": 8,
+				"geometry": {
+					"coordinates": [
+						-46.8151,
+						51.1963
+					]
+				}
+			},
+			{
+				"id": 9,
+				"geometry": {
+					"coordinates": [
+						-46.0614,
+						46.3976
+					]
+				}
+			},
+			{
+				"id": 10,
+				"geometry": {
+					"coordinates": [
+						-53.8428,
+						59.0735
+					]
+				}
+			},
+			{
+				"id": 11,
+				"geometry": {
+					"coordinates": [
+						-32.5977,
+						36.2988
+					]
+				}
+			},
+			{
+				"id": 12,
+				"geometry": {
+					"coordinates": [
+						-30.8079,
+						35.4694
+					]
+				}
+			},
+			{
+				"id": 13,
+				"geometry": {
+					"coordinates": [
+						-35.5143,
+						29.4104
+					]
+				}
+			},
+			{
+				"id": 14,
+				"geometry": {
+					"coordinates": [
+						-37.2566,
+						22.5055
+					]
+				}
+			},
+			{
+				"id": 15,
+				"geometry": {
+					"coordinates": [
+						-40.7264,
+						20.9015
+					]
+				}
+			},
+			{
+				"id": 16,
+				"geometry": {
+					"coordinates": [
+						-41.3644,
+						22.8900
+					]
+				}
+			},
+			{
+				"id": 17,
+				"geometry": {
+					"coordinates": [
+						-42.9805,
+						17.6660
+					]
+				}
+			},
+			{
+				"id": 18,
+				"geometry": {
+					"coordinates": [
+						-44.7935,
+						16.6663
+					]
+				}
+			},
+			{
+				"id": 19,
+				"geometry": {
+					"coordinates": [
+						-42.5369,
+						24.7302
+					]
+				}
+			},
+			{
+				"id": 20,
+				"geometry": {
+					"coordinates": [
+						-42.6097,
+						22.7747
+					]
+				}
+			},
+			{
+				"id": 21,
+				"geometry": {
+					"coordinates": [
+						-44.1546,
+						21.9781
+					]
+				}
+			},
+			{
+				"id": 22,
+				"geometry": {
+					"coordinates": [
+						-44.7662,
+						21.2311
+					]
+				}
+			},
+			{
+				"id": 23,
+				"geometry": {
+					"coordinates": [
+						-47.9163,
+						20.7806
+					]
+				}
+			},
+			{
+				"id": 24,
+				"geometry": {
+					"coordinates": [
+						-48.4984,
+						22.5439
+					]
+				}
+			},
+			{
+				"id": 25,
+				"geometry": {
+					"coordinates": [
+						-43.6281,
+						27.7350
+					]
+				}
+			},
+			{
+				"id": 26,
+				"geometry": {
+					"coordinates": [
+						-45.6870,
+						33.0359
+					]
+				}
+			},
+			{
+				"id": 27,
+				"geometry": {
+					"coordinates": [
+						-47.9200,
+						32.2119
+					]
+				}
+			},
+			{
+				"id": 28,
+				"geometry": {
+					"coordinates": [
+						-50.5379,
+						33.0524
+					]
+				}
+			},
+			{
+				"id": 29,
+				"geometry": {
+					"coordinates": [
+						-50.8718,
+						27.7515
+					]
+				}
+			},
+			{
+				"id": 30,
+				"geometry": {
+					"coordinates": [
+						-51.6317,
+						28.1799
+					]
+				}
+			},
+			{
+				"id": 31,
+				"geometry": {
+					"coordinates": [
+						-52.8956,
+						26.9769
+					]
+				}
+			},
+			{
+				"id": 32,
+				"geometry": {
+					"coordinates": [
+						-52.9321,
+						30.3827
+					]
+				}
+			},
+			{
+				"id": 33,
+				"geometry": {
+					"coordinates": [
+						-58.5797,
+						26.1255
+					]
+				}
+			},
+			{
+				"id": 34,
+				"geometry": {
+					"coordinates": [
+						-58.6627,
+						30.3442
+					]
+				}
+			},
+			{
+				"id": 35,
+				"geometry": {
+					"coordinates": [
+						-53.3768,
+						37.7765
+					]
+				}
+			},
+			{
+				"id": 36,
+				"geometry": {
+					"coordinates": [
+						-56.9480,
+						36.0516
+					]
+				}
+			},
+			{
+				"id": 37,
+				"geometry": {
+					"coordinates": [
+						-55.8167,
+						35.9253
+					]
+				}
+			},
+			{
+				"id": 38,
+				"geometry": {
+					"coordinates": [
+						-36.1423,
+						38.9685
+					]
+				}
+			},
+			{
+				"id": 39,
+				"geometry": {
+					"coordinates": [
+						-45.1665,
+						42.6654
+					]
+				}
+			},
+			{
+				"id": 40,
+				"geometry": {
+					"coordinates": [
+						-42.4640,
+						21.9891
+					]
+				}
+			},
+			{
+				"id": 41,
+				"geometry": {
+					"coordinates": [
+						-38.6984,
+						22.2748
+					]
+				}
+			},
+			{
+				"id": 42,
+				"geometry": {
+					"coordinates": [
+						-49.8557,
+						24.0271
+					]
+				}
+			},
+			{
+				"id": 43,
+				"geometry": {
+					"coordinates": [
+						-50.3770,
+						24.4995
+					]
+				}
+			},
+			{
+				"id": 44,
+				"geometry": {
+					"coordinates": [
+						-50.3805,
+						24.3732
+					]
+				}
+			},
+			{
+				"id": 45,
+				"geometry": {
+					"coordinates": [
+						-50.3700,
+						24.6313
+					]
+				}
+			}
 		]
 	}
 }
