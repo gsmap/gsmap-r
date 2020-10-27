@@ -1,4 +1,4 @@
-t = L.latLngBounds([0, 0], [-66.5, 90]);
+t = L.latLngBounds([0, 0], [-90, 90]);
 
 var raw, data, map = L.map("map", {
 	center: [-35, 45],
@@ -46,26 +46,26 @@ fetch("js/coord.json").then(response => response.json()
 	.then(table => {
 		raw = table, data = table.data, doc = document
 		for (const e in data) {
-			var length = data[e].length,
+			var l = data[e].length,
 			get=0;
-			document.getElementById(`${e}_max`).innerHTML = length
-			for (let index = 0; index < length; index++) {
-				if (localStorage[`${e}_${index}`]) {
+			doc.getElementById(`${e}-max`).innerHTML = l
+			for (let i = 0; i < l; i++) {
+				if (localStorage[`${e}-${i}`]) {
 					get++
 				}
 			};
-			document.getElementById(`${e}_current`).innerHTML = get
+			doc.getElementById(`${e}-current`).innerHTML = get
 		}
 	})
 );
 
-var icon_checkbox = document.querySelectorAll(".icon_checkbox");
+var icon_checkbox = document.querySelectorAll(".icon-checkbox");
 icon_checkbox.forEach(e => {
 	e.addEventListener("click", icon_toggle)
 });
 
 function icon_toggle() {
-	var icon_data = this.dataset.icon.split("_"),
+	var icon_data = this.dataset.icon.split("-"),
 		category = icon_data[0],
 		symbol = icon_data[1],
 		color = icon_data[2];
@@ -73,14 +73,14 @@ function icon_toggle() {
 };
 
 function draw_icon(category, symbol, color, state) {
-	var obj = data[category], marker = [];
-	if (!this[`${category}_mark`]) {
-		this[`${category}_mark`] = L.layerGroup().addTo(map);
+	var obj = data[category];
+	if (!this[`${category}-mark`]) {
+		this[`${category}-mark`] = L.layerGroup().addTo(map);
 		for (const e in obj) {
 			var id = obj[e].id,
 				coord_x = obj[e].geometry.coordinates[0],
 				coord_y = obj[e].geometry.coordinates[1],
-				cache = `${category}_${id}`, opacity = "";
+				cache = `${category}-${id}`, opacity = "";
 			if (localStorage[cache]) {
 				opacity = "op-50"
 			};
@@ -105,19 +105,19 @@ function draw_icon(category, symbol, color, state) {
 				`	<input type="checkbox">` +
 				`	<span class="slider"></span>` +
 				`</label>`
-			).addTo(window[`${category}_mark`])
+			).addTo(window[`${category}-mark`])
 		}
 	}
 	if (state) {
-		map.addLayer(window[`${category}_mark`]);
+		map.addLayer(window[`${category}-mark`]);
 	} else {
-		map.removeLayer(window[`${category}_mark`]);
+		map.removeLayer(window[`${category}-mark`]);
 	}
 };
 
 map.on("popupopen", function (e) {
 	var id = e.popup._source._icon.classList[2],
-	category = id.split("_")[0];
+	category = id.split("-")[0];
 	if (localStorage[id]) {
 		e.target._popup._container.querySelector("input").checked = true
 	};
@@ -125,10 +125,10 @@ map.on("popupopen", function (e) {
 		e.popup._source._icon.classList.toggle("op-50");
 		if (localStorage[id]) {
 			localStorage.removeItem(id)
-			document.getElementById(`${category}_current`).innerHTML--
+			document.getElementById(`${category}-current`).innerHTML--
 		} else {
 			localStorage[id] = true
-			document.getElementById(`${category}_current`).innerHTML++
+			document.getElementById(`${category}-current`).innerHTML++
 		}
 	});
 });
