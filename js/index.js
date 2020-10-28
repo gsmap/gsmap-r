@@ -48,7 +48,11 @@ fetch("js/coord.json").then(response => response.json()
 		for (const e in data) {
 			var l = data[e].length,
 				get = 0;
-			doc.getElementById(`${e}-max`).innerHTML = l
+			if (doc.getElementById(`${e}-max`)) {
+				doc.getElementById(`${e}-max`).innerHTML = l
+			} else {
+				continue
+			}
 			for (let i = 0; i < l; i++) {
 				if (localStorage[`${e}-${i+1}`]) {
 					get++
