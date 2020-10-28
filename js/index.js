@@ -16,10 +16,10 @@ var raw, data, map = L.map("map", {
 });
 
 var sidebar = L.control.sidebar({
-	autopan: false,       // whether to maintain the centered map point when opening the sidebar
-	closeButton: true,    // whether t add a close button to the panes
-	container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
-	position: 'left',     // left or right
+	autopan: false,
+	closeButton: true,
+	container: 'sidebar',
+	position: 'left',
 }).addTo(map);
 
 L.control.attribution({
@@ -80,12 +80,12 @@ function draw_icon(category, symbol, color, state) {
 			var id = obj[e].id,
 				coord_x = obj[e].coordinates[0],
 				coord_y = obj[e].coordinates[1],
-				cache = `${category}-${id}`, opacity = "", content = "";
+				cache = `${category}-${id}`, opacity = "", title = "", content = "";
 			if (localStorage[cache]) {
 				opacity = "op-50"
 			};
 			if (obj[e].title) {
-				cache = obj[e].title,
+				title = obj[e].title,
 				content = obj[e].content
 			}
 			L.marker(
@@ -103,7 +103,7 @@ function draw_icon(category, symbol, color, state) {
 					})
 				}
 			).bindPopup(
-				`<h1 class="popup-header">${cache}</h1>` +
+				`<h1 class="popup-header">${title||cache}</h1>` +
 				`<br>` +
 				`<div class="popup-content">${content}</div>` +
 				`<label class="switch">` +

@@ -7,8 +7,7 @@
 	<title>원신지도R</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
-	<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/css/leaflet-sidebar.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -21,10 +20,11 @@
 		<!-- Nav tabs -->
 		<div class="leaflet-sidebar-tabs">
 			<ul role="tablist">
-				<li><a href="#home" role="tab"><i class="fa fa-bahai"></i></a></li>
+				<li><a href="#culus" role="tab"><i class="fa fa-bahai"></i></a></li>
 				<li><a href="#chest" role="tab"><i class="fa fa-box"></i></a></li>
 				<li><a href="#puzzle" role="tab"><i class="fa fa-puzzle-piece"></i></a></li>
 				<li><a href="#collection" role="tab"><i class="fa fa-book"></i></a></li>
+				<li><a href="#npc" role="tab"><i class="fa fa-user"></i></a></li>
 			</ul>
 
 			<ul role="tablist">
@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="leaflet-sidebar-content">
-			<div class="leaflet-sidebar-pane" id="home">
+			<div class="leaflet-sidebar-pane" id="culus">
 				<h1 class="leaflet-sidebar-header">
 					culus
 					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
@@ -151,6 +151,18 @@
 							<!-- <label id="anemoculus-current">All</label> / <label id="anemoculus-max">Clear</label> -->
 						</div>
 					</div>
+					<div class="puzzle_kill checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_kill-skull-crossbones-darkred">
+							<i class="fas fa-skull-crossbones" style="color:darkred"></i>
+							<span class="checkmark"></span>
+							<span>몬스터</span>
+							<label id="puzzle_kill-current">0</label>/<label id="puzzle_kill-max"></label>
+						</label>
+						<div class="puzzle_kill-option">
+							<!-- <label id="anemoculus-current">All</label> / <label id="anemoculus-max">Clear</label> -->
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="leaflet-sidebar-pane" id="collection">
@@ -168,6 +180,26 @@
 							<label id="collection_book-current">0</label>/<label id="collection_book-max"></label>
 						</label>
 						<div class="collection_book-option">
+							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="leaflet-sidebar-pane" id="npc">
+				<h1 class="leaflet-sidebar-header">
+					npc
+					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+				</h1>
+				<div class="icon">
+					<div class="npc_speed checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="npc_speed-running-blue">
+							<i class="fas fa-running" style="color:blue"></i>
+							<span class="checkmark"></span>
+							<span>시간제한 도전</span>
+							<label id="npc_speed-current">0</label>/<label id="npc_speed-max"></label>
+						</label>
+						<div class="npc_speed-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
 						</div>
 					</div>
