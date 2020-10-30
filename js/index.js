@@ -89,7 +89,7 @@ function draw_icon(category, symbol, color, state) {
 				opacity = "op-50"
 			};
 			if (obj[e].title) {
-				title = obj[e].title,
+				title = `${obj[e].title}-${id}`,
 				content = obj[e].content
 			}
 			L.marker(
