@@ -46,7 +46,7 @@ fetch("js/coord.json").then(response => response.json()
 	.then(table => {
 		raw = table, data = table.data, doc = document
 		for (const e in data) {
-			var l = data[e].length,
+			var l = data[e].length - 1,
 				get = 0;
 			if (doc.getElementById(`${e}-max`)) {
 				doc.getElementById(`${e}-max`).innerHTML = l
@@ -54,7 +54,7 @@ fetch("js/coord.json").then(response => response.json()
 				continue
 			}
 			for (let i = 0; i < l; i++) {
-				if (localStorage[`${e}-${i+1}`]) {
+				if (localStorage[`${e}-${i}`]) {
 					get++
 				}
 			};
@@ -77,20 +77,24 @@ function icon_toggle() {
 };
 
 function draw_icon(category, symbol, color, state) {
-	var obj = data[category];
+	var obj = data[category], icon = obj[0].icon, text = obj[0].text || "";
 	if (!this[`${category}-mark`]) {
 		this[`${category}-mark`] = L.layerGroup().addTo(map);
 		for (const e in obj) {
+			if (e == 0) continue;
 			var id = obj[e].id,
 				coord_x = obj[e].coordinates[0],
 				coord_y = obj[e].coordinates[1],
-				cache = `${category}-${id}`, opacity = "", title = "", content = "";
+				cache = `${category}-${id}`, opacity = "", title = "", content = "", url = "";
 			if (localStorage[cache]) {
 				opacity = "op-50"
 			};
 			if (obj[e].title) {
-				title = `${obj[e].title}-${id}`,
-				content = obj[e].content
+				title = `${obj[e].title}-#${id}`,
+					content = obj[e].content
+			}
+			if (obj[e].url) {
+				url = `<a class="url" href="https://youtu.be/${obj[e].url}">View on Youtube</a>`
 			}
 			L.marker(
 				[coord_x, coord_y],
@@ -107,14 +111,22 @@ function draw_icon(category, symbol, color, state) {
 					})
 				}
 			).bindPopup(
-				`<h1 class="popup-header">${title||cache}</h1>` +
-				`<br>` +
-				`<div class="popup-content">${content}</div>` +
+				`<div class="popup-header">` +
+				`<span class="popup-icon fa fa-${icon}"></span>` +
+				`<span class="popup-title">` +
+				`${title || cache}` +
+				`<small>${text}</small>` +
 				`<label class="switch">` +
-				`	<input type="checkbox">` +
-				`	<span class="slider"></span>` +
-				`</label>`
-			).addTo(window[`${category}-mark`])
+				`<input type="checkbox">` +
+				`<span class="slider"></span>` +
+				`</label>` +
+				`</span>` +
+				`</div>` +
+				`<div class="popup-content" style="padding:20px;color:white">` +
+				`${content}` +
+				`${url}` +
+				`</div>`
+				, { closeButton: false }).addTo(window[`${category}-mark`])
 		}
 	}
 	if (state) {
