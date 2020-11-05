@@ -77,7 +77,7 @@ function icon_toggle() {
 };
 
 function draw_icon(category, symbol, color, state) {
-	var obj = data[category], icon = obj[0].icon, text = obj[0].text || "";
+	var obj = data[category], icon = obj[0].icon, text = obj[0].title || "";
 	if (!this[`${category}-mark`]) {
 		this[`${category}-mark`] = L.layerGroup().addTo(map);
 		for (const e in obj) {
@@ -89,8 +89,7 @@ function draw_icon(category, symbol, color, state) {
 			if (localStorage[cache]) {
 				opacity = "op-50"
 			};
-			if (obj[e].title) {
-				title = `${obj[e].title}-#${id}`,
+			if (obj[e].content) {
 					content = obj[e].content
 			}
 			if (obj[e].url) {

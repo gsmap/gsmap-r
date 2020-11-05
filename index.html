@@ -22,6 +22,8 @@
 			<ul role="tablist">
 				<li><a href="#culus" role="tab"><i class="fa fa-bahai"></i></a></li>
 				<li><a href="#chest" role="tab"><i class="fa fa-box"></i></a></li>
+				<li><a href="#other_chest" role="tab"><i class="fa fa-boxes"></i></a></li>
+				<li><a href="#seelie" role="tab"><i class="fa fa-meteor"></i></a></li>
 				<li><a href="#puzzle" role="tab"><i class="fa fa-puzzle-piece"></i></a></li>
 				<li><a href="#collection" role="tab"><i class="fa fa-book"></i></a></li>
 				<li><a href="#resources" role="tab"><i class="fa fa-seedling"></i></a></li>
@@ -70,90 +72,128 @@
 					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
 				</h1>
 				<div class="icon">
-					<div class="icon">
-						<div class="item_artifact checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="item_artifact-cannabis-pink">
-								<i class="fas fa-cannabis" style="color:white"></i>
-								<span class="checkmark"></span>
-								<span>일일성유물</span>
-								<label id="item_artifact-current">0</label>/<label id="item_artifact-max"></label>
-							</label>
-							<div class="item_artifact-option">
-								<!-- <label id="mond-shrine-current">All</label> / <label id="mond-shrine-max">Clear</label> -->
-							</div>
+					<div class="mond_chest_common checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_common-box-gray">
+							<i class="fas fa-box"></i>
+							<span class="checkmark"></span>
+							<span>몬드 - 평범한 상자</span>
+							<label id="mond_chest_common-current">0</label>/<label id="mond_chest_common-max"></label>
+						</label>
+						<div class="mond_chest_common-option">
+							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
 						</div>
-						<div class="shrine checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="mond_shrine-box-red">
-								<i class="fas fa-warehouse" style="color:white"></i>
-								<span class="checkmark"></span>
-								<span>몬드 - 지령감실</span>
-								<label id="mond_shrine-current">0</label>/<label id="mond_shrine-max"></label>
-							</label>
-							<div class="mond_shrine-option">
-								<!-- <label id="mond-shrine-current">All</label> / <label id="mond-shrine-max">Clear</label> -->
-							</div>
+					</div>
+					<div class="liyue_chest_common checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="liyue_chest_common-box-gray">
+							<i class="fas fa-box"></i>
+							<span class="checkmark"></span>
+							<span>리월 - 평범한 상자</span>
+							<label id="liyue_chest_common-current">0</label>/<label id="liyue_chest_common-max"></label>
+						</label>
+						<div class="liyue_chest_common-option">
+							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
 						</div>
-						<div class="shrine checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="liyue_shrine-box-blue">
-								<i class="fas fa-warehouse" style="color:white"></i>
-								<span class="checkmark"></span>
-								<span>리월 - 지령감실</span>
-								<label id="liyue_shrine-current">0</label>/<label id="liyue_shrine-max"></label>
-							</label>
-							<div class="liyue_shrine-option">
-								<!-- <label id="liyue-shrine-current">All</label> / <label id="liyue-shrine-max">Clear</label> -->
-							</div>
+					</div>
+				</div>
+			</div>
+			<div class="leaflet-sidebar-pane" id="other_chest">
+				<h1 class="leaflet-sidebar-header">
+					other chest
+					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+				</h1>
+				<div class="icon">
+					<div class="item_artifact checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="item_artifact-cannabis-pink">
+							<i class="fas fa-cannabis"></i>
+							<span class="checkmark"></span>
+							<span>일일성유물</span>
+							<label id="item_artifact-current">0</label>/<label id="item_artifact-max"></label>
+						</label>
+						<div class="item_artifact-option">
+							<!-- <label id="mond-shrine-current">All</label> / <label id="mond-shrine-max">Clear</label> -->
 						</div>
-						<div class="mond_challenge checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="mond_challenge-stopwatch-gray">
-								<i class="fas fa-stopwatch" style="color:red"></i>
-								<span class="checkmark"></span>
-								<span>몬드 - 시련</span>
-								<label id="mond_challenge-current">0</label>/<label id="mond_challenge-max"></label>
-							</label>
-							<div class="mond_challenge-option">
-								<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
-							</div>
+					</div>
+					<div class="shrine checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="mond_shrine-box-red">
+							<i class="fas fa-warehouse"></i>
+							<span class="checkmark"></span>
+							<span>몬드 - 지령감실</span>
+							<label id="mond_shrine-current">0</label>/<label id="mond_shrine-max"></label>
+						</label>
+						<div class="mond_shrine-option">
+							<!-- <label id="mond-shrine-current">All</label> / <label id="mond-shrine-max">Clear</label> -->
 						</div>
-						<div class="liyue_challenge checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="liyue_challenge-stopwatch-gray">
-								<i class="fas fa-stopwatch" style="color:red"></i>
-								<span class="checkmark"></span>
-								<span>리월 - 시련</span>
-								<label id="liyue_challenge-current">0</label>/<label id="liyue_challenge-max"></label>
-							</label>
-							<div class="liyue_challenge-option">
-								<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
-							</div>
+					</div>
+					<div class="shrine checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="liyue_shrine-box-blue">
+							<i class="fas fa-warehouse"></i>
+							<span class="checkmark"></span>
+							<span>리월 - 지령감실</span>
+							<label id="liyue_shrine-current">0</label>/<label id="liyue_shrine-max"></label>
+						</label>
+						<div class="liyue_shrine-option">
+							<!-- <label id="liyue-shrine-current">All</label> / <label id="liyue-shrine-max">Clear</label> -->
 						</div>
-						<div class="mond_chest_common checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_common-stopwatch-gray">
-								<i class="fas fa-stopwatch" style="color:red"></i>
-								<span class="checkmark"></span>
-								<span>몬드 - 평범한 상자</span>
-								<label id="mond_chest_common-current">0</label>/<label id="mond_chest_common-max"></label>
-							</label>
-							<div class="mond_chest_common-option">
-								<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
-							</div>
+					</div>
+					<div class="mond_challenge checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="mond_challenge-stopwatch-gray">
+							<i class="fas fa-stopwatch" style="color:red"></i>
+							<span class="checkmark"></span>
+							<span>몬드 - 시련</span>
+							<label id="mond_challenge-current">0</label>/<label id="mond_challenge-max"></label>
+						</label>
+						<div class="mond_challenge-option">
+							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
 						</div>
-						<div class="chest_common checkbox">
-							<label class="container" style="width: 100%">
-								<input class="icon-checkbox" type="checkbox" data-icon="chest_common-stopwatch-gray">
-								<i class="fas fa-stopwatch" style="color:red"></i>
-								<span class="checkmark"></span>
-								<span>리월 - 평범한 상자</span>
-								<label id="chest_common-current">0</label>/<label id="chest_common-max"></label>
-							</label>
-							<div class="mond_chest_common-option">
-								<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
-							</div>
+					</div>
+					<div class="liyue_challenge checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="liyue_challenge-stopwatch-gray">
+							<i class="fas fa-stopwatch" style="color:red"></i>
+							<span class="checkmark"></span>
+							<span>리월 - 시련</span>
+							<label id="liyue_challenge-current">0</label>/<label id="liyue_challenge-max"></label>
+						</label>
+						<div class="liyue_challenge-option">
+							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="leaflet-sidebar-pane" id="seelie">
+				<h1 class="leaflet-sidebar-header">
+					seelie
+					<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+				</h1>
+				<div class="icon">
+					<div class="mond_chest_seelie checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_seelie-meteor-red">
+							<i class="fas fa-warehouse"></i>
+							<span class="checkmark"></span>
+							<span>몬드 - 선령</span>
+							<label id="mond_chest_seelie-current">0</label>/<label id="mond_chest_seelie-max"></label>
+						</label>
+						<div class="mond_chest_seelie-option">
+							<!-- <label id="mond-shrine-current">All</label> / <label id="mond-shrine-max">Clear</label> -->
+						</div>
+					</div>
+					<div class="liyue_chest_seelie checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="liyue_chest_seelie-meteor-blue">
+							<i class="fas fa-warehouse"></i>
+							<span class="checkmark"></span>
+							<span>리월 - 선령</span>
+							<label id="liyue_chest_seelie-current">0</label>/<label id="liyue_chest_seelie-max"></label>
+						</label>
+						<div class="liyue_chest_seelie-option">
+							<!-- <label id="liyue-shrine-current">All</label> / <label id="liyue-shrine-max">Clear</label> -->
 						</div>
 					</div>
 				</div>
@@ -291,7 +331,7 @@
 					<div class="resources_windwheelaster checkbox">
 						<label class="container" style="width: 100%">
 							<input class="icon-checkbox" type="checkbox" data-icon="resources_windwheelaster-leaf-green">
-							<i class="fas fa-leaf" style="color:white"></i>
+							<i class="fas fa-leaf"></i>
 							<span class="checkmark"></span>
 							<span>풍차 국화</span>
 							<label id="resources_windwheelaster-current">0</label>/<label id="resources_windwheelaster-max"></label>
@@ -323,11 +363,12 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
-		<script src="js/awesomemarkers.js"></script>
-		<script src="js/index.js"></script>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
+	<script src="js/awesomemarkers.js"></script>
+	<script src="js/index.js"></script>
 </body>
 
 </html>
