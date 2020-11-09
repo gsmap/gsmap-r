@@ -52,7 +52,7 @@ fetch("js/coord.json").then(response => response.json()
 				doc.getElementById(`${e}-max`).innerHTML = l
 			} else {
 				continue
-			}
+			};
 			for (let i = 0; i < l; i++) {
 				if (localStorage[`${e}-${i}`]) {
 					get++
@@ -91,10 +91,10 @@ function draw_icon(category, symbol, color, state) {
 			};
 			if (obj[e].content) {
 					content = obj[e].content
-			}
+			};
 			if (obj[e].url) {
 				url = `<a class="url" href="https://youtu.be/${obj[e].url}">View on Youtube</a>`
-			}
+			};
 			L.marker(
 				[coord_x, coord_y],
 				{
