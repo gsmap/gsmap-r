@@ -113,8 +113,8 @@ function draw_icon(category, symbol, color, state) {
 				`<div class="popup-header">` +
 				`<span class="popup-icon fa fa-${icon}"></span>` +
 				`<span class="popup-title">` +
-				`${title || cache}` +
-				`<small>${text}</small>` +
+				`${text}` +
+				`<small>${title || cache}</small>` +
 				`<label class="switch">` +
 				`<input type="checkbox">` +
 				`<span class="slider"></span>` +
