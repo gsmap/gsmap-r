@@ -26,8 +26,8 @@ L.control.attribution({
 	prefix: "<a href='https://github.com/gsmap/gsmap-r' target='_blank'>github</a>"
 }).addTo(map);
 /*
-var imageUrl = 'https://cdn.jsdelivr.net/gh/gsmap/gsmap_tiles@1.1/tiles/low_teyvat.webp',
-	imageBounds = [[0, 0], [-66.5, -90]];
+var imageUrl = '../gsmap_tiles/tiles/teyvat.png',
+	imageBounds = [[0, 0], [-70, 90]];
 L.imageOverlay(imageUrl, t).addTo(map);
 */
 L.TileLayer.T = L.TileLayer.extend({
@@ -36,12 +36,12 @@ L.TileLayer.T = L.TileLayer.extend({
 	},
 	reuseTiles: true
 });
-
 L.tileLayer.t = function () {
 	return new L.TileLayer.T()
 };
 
 map.addLayer(L.tileLayer.t());
+
 fetch("js/coord.json").then(response => response.json()
 	.then(table => {
 		raw = table, data = table.data, doc = document
