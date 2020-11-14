@@ -110,7 +110,7 @@
 					</div>
 					<div class="mond_chest_luxurious checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_luxurious-box-yellow">
+							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_luxurious-box-orange">
 							<i class="fas fa-box"></i>
 							<span class="checkmark"></span>
 							<span>몬드 - 화려한 보물상자</span>
@@ -350,13 +350,25 @@
 					</div>
 					<div class="puzzle_elec_totem checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_elec_totem-burn-magenta">
+							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_elec_totem-bolt-magenta">
 							<i class="fas fa-bolt" style="color:magenta"></i>
 							<span class="checkmark"></span>
 							<span>번개 토템</span>
 							<label id="puzzle_elec_totem-current">0</label>/<label id="puzzle_elec_totem-max"></label>
 						</label>
 						<div class="puzzle_elec_totem-option">
+							<!-- <label id="anemoculus-current">All</label> / <label id="anemoculus-max">Clear</label> -->
+						</div>
+					</div>
+					<div class="puzzle_cryo_totem checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_cryo_totem-snowflake-lightblue">
+							<i class="fas fa-snowflake" style="color:lightblue"></i>
+							<span class="checkmark"></span>
+							<span>얼음 토템</span>
+							<label id="puzzle_cryo_totem-current">0</label>/<label id="puzzle_cryo_totem-max"></label>
+						</label>
+						<div class="puzzle_cryo_totem-option">
 							<!-- <label id="anemoculus-current">All</label> / <label id="anemoculus-max">Clear</label> -->
 						</div>
 					</div>
@@ -377,6 +389,18 @@
 							<label id="collection_book-current">0</label>/<label id="collection_book-max"></label>
 						</label>
 						<div class="collection_book-option">
+							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
+						</div>
+					</div>
+					<div class="collection_geosigil checkbox">
+						<label class="container" style="width: 100%">
+							<input class="icon-checkbox" type="checkbox" data-icon="collection_geosigil-fingerprint-orange">
+							<i class="fas fa-fingerprint" style="color:orange"></i>
+							<span class="checkmark"></span>
+							<span>바위의 인장</span>
+							<label id="collection_geosigil-current">0</label>/<label id="collection_geosigil-max"></label>
+						</label>
+						<div class="collection_geosigil-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
 						</div>
 					</div>
@@ -441,6 +465,104 @@
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
 	<script src="js/awesomemarkers.js"></script>
 	<script src="js/index.js"></script>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-coordinates-control@1.0.2/src/L.Control.Coordinates.min.css">
+	<script>
+		L.Control.Coordinates = L.Control.extend({
+			options: {
+				position: 'bottomleft',
+				latitudeText: '',
+				longitudeText: '',
+				promptText: 'Press Ctrl+C to copy coordinates',
+				precision: 4
+			},
+
+			initialize: function (options) {
+				L.Control.prototype.initialize.call(this, options);
+			},
+
+			onAdd: function (map) {
+				var className = 'leaflet-control-coordinates',
+					that = this,
+					container = this._container = L.DomUtil.create('div', className);
+				this.visible = false;
+
+				L.DomUtil.addClass(container, 'hidden');
+
+
+				L.DomEvent.disableClickPropagation(container);
+
+				this._addText(container, map);
+
+				L.DomEvent.addListener(container, 'click', function () {
+					var lat = L.DomUtil.get(that._lat),
+						lng = L.DomUtil.get(that._lng),
+						latTextLen = this.options.latitudeText.length + 1,
+						lngTextLen = this.options.longitudeText.length + 1,
+						latTextIndex = lat.textContent.indexOf(this.options.latitudeText) + latTextLen,
+						lngTextIndex = lng.textContent.indexOf(this.options.longitudeText) + lngTextLen,
+						latCoordinate = lat.textContent.substr(latTextIndex),
+						lngCoordinate = lng.textContent.substr(lngTextIndex);
+
+					//window.prompt(this.options.promptText, `${latCoordinate},${lngCoordinate}`);
+					var dummy = document.createElement("textarea");
+					document.body.appendChild(dummy);
+					dummy.value = `${latCoordinate},${lngCoordinate}`;
+					dummy.select();
+					document.execCommand("copy");
+					document.body.removeChild(dummy);
+				}, this);
+
+				return container;
+			},
+
+			_addText: function (container, context) {
+				this._lat = L.DomUtil.create('span', 'leaflet-control-coordinates-lat', container),
+					this._lng = L.DomUtil.create('span', 'leaflet-control-coordinates-lng', container);
+
+				return container;
+			},
+
+			/**
+			 * This method should be called when user clicks the map.
+			 * @param event object
+			 */
+			setCoordinates: function (obj) {
+				if (!this.visible) {
+					L.DomUtil.removeClass(this._container, 'hidden');
+				}
+
+				if (obj.latlng) {
+					L.DomUtil.get(this._lat).innerHTML = '<strong>' + this.options.latitudeText + ':</strong> ' + obj.latlng.lat.toFixed(this.options.precision).toString();
+					L.DomUtil.get(this._lng).innerHTML = '<strong>' + this.options.longitudeText + ':</strong> ' + obj.latlng.lng.toFixed(this.options.precision).toString();
+				}
+				var dummy = document.createElement("textarea");
+					document.body.appendChild(dummy);
+					dummy.value = `${obj.latlng.lat.toFixed(this.options.precision).toString()},${obj.latlng.lng.toFixed(this.options.precision).toString()}`;
+					dummy.select();
+					document.execCommand("copy");
+					document.body.removeChild(dummy);
+			}
+		});
+
+		L.Map.mergeOptions({
+			positionControl: false
+		});
+
+		L.Map.addInitHook(function () {
+			if (this.options.positionControl) {
+				this.positionControl = new L.Control.Coordinates();
+				this.addControl(this.positionControl);
+			}
+		});
+
+		L.control.coordinates = function (options) {
+			return new L.Control.Coordinates(options);
+		};
+		var c = L.control.coordinates().addTo(this.map);
+
+		this.map.on('click', function (e) {
+			c.setCoordinates(e);
+		});</script> -->
 </body>
 
 </html>
