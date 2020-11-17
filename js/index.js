@@ -30,6 +30,7 @@ var imageUrl = '../gsmap_tiles/tiles/teyvat.png',
 	imageBounds = [[0, 0], [-70, 90]];
 L.imageOverlay(imageUrl, t).addTo(map);
 */
+
 L.TileLayer.T = L.TileLayer.extend({
 	getTileUrl: function (coords) {
 		return `https://cdn.jsdelivr.net/gh/gsmap/gsmap_tiles@1.1/tiles/${coords.z}/${coords.x}_${coords.y}.webp`;
