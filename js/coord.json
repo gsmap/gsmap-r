@@ -5200,6 +5200,21 @@
 					-41.1828,
 					47.0215
 				]
+			},
+			{
+				"id": 20,
+				"coordinates": [
+					-49.7067,
+					55.2777
+				],
+				"content": "섬 동쪽에서 발굴"
+			},
+			{
+				"id": 21,
+				"coordinates": [
+					-52.4895,
+					54.9756
+				]
 			}
 		],
 		"liyue_chest_exquisite": [
@@ -5222,6 +5237,14 @@
 					50.2075
 				],
 				"content": "해변가"
+			},
+			{
+				"id": 3,
+				"coordinates": [
+					-49.8911,
+					55.1019
+				],
+				"content": "보트옆에서 발굴"
 			}
 		],
 		"liyue_chest_precoius": [
@@ -7052,6 +7075,54 @@
 					63.8086
 				],
 				"url": "au8ZE5Mg7hE"
+			},
+			{
+				"id": 11,
+				"coordinates": [
+					-30.9776,
+					63.8086
+				],
+				"url": "qkph_P9bI3I"
+			},
+			{
+				"id": 12,
+				"coordinates": [
+					-30.9776,
+					63.8086
+				],
+				"url": "qkph_P9bI3I"
+			},
+			{
+				"id": 13,
+				"coordinates": [
+					-30.9776,
+					63.8086
+				],
+				"url": "qkph_P9bI3I"
+			},
+			{
+				"id": 14,
+				"coordinates": [
+					-29.5878,
+					64.5062
+				],
+				"url": "JlWb6UfngsI"
+			},
+			{
+				"id": 15,
+				"coordinates": [
+					-30.6048,
+					65.8026
+				],
+				"url": "o8uAdV0JWLA"
+			},
+			{
+				"id": 16,
+				"coordinates": [
+					-30.6757,
+					65.7477
+				],
+				"url": "o8uAdV0JWLA"
 			}
 		],
 		"resources_crystalcore": [
@@ -7580,6 +7651,75 @@
 				],
 				"sub_title": "임랑",
 				"content": "2성 유물 판매 - 리셋 7일"
+			}
+		],
+		"enemy_samachurls": [
+			{
+				"icon": "skull",
+				"title": "츄츄족 샤먼"
+			},
+			{
+				"id": 1,
+				"coordinates": [
+					-18.4692,
+					69.4885
+				]
+			},
+			{
+				"id": 2,
+				"coordinates": [
+					-17.3926,
+					71.8726
+				]
+			},
+			{
+				"id": 3,
+				"coordinates": [
+					-17.0515,
+					71.6034
+				]
+			},
+			{
+				"id": 4,
+				"coordinates": [
+					-18.6619,
+					66.7804
+				]
+			},
+			{
+				"id": 5,
+				"coordinates": [
+					-19.8856,
+					65.5939
+				]
+			},
+			{
+				"id": 6,
+				"coordinates": [
+					-20.2674,
+					63.7646
+				]
+			},
+			{
+				"id": 7,
+				"coordinates": [
+					-18.0571,
+					64.7205
+				]
+			},
+			{
+				"id": 8,
+				"coordinates": [
+					-26.6671,
+					52.5201
+				]
+			},
+			{
+				"id": 9,
+				"coordinates": [
+					-28.2028,
+					53.5968
+				]
 			}
 		],
 		"item_artifact": [
