@@ -4,11 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<title>원신지도R</title>
+	<title>Genshiin Imapct Map R</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/css/leaflet-sidebar.min.css">
 </head>
@@ -47,7 +48,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="anemoculus-bahai-green">
 							<i class="fas fa-bahai" style="color:aqua"></i>
 							<span class="checkmark"></span>
-							<span>바람신의 눈동자</span>
+							<span>Anemoculus</span>
 							<label id="anemoculus-current">0</label>/<label id="anemoculus-max"></label>
 						</label>
 						<div class="anemoculus-option">
@@ -59,7 +60,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="geoculus-bahai-darkgreen">
 							<i class="fas fa-bahai" style="color:BurlyWood"></i>
 							<span class="checkmark"></span>
-							<span>바위신의 눈동자</span>
+							<span>Geoculus</span>
 							<label id="geoculus-current">0</label>/<label id="geoculus-max"></label>
 						</label>
 						<div class="geoculus-option"></div>
@@ -77,7 +78,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_common-box-gray">
 							<i class="fas fa-box"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 평범한 보물상자</span>
+							<span>Mond - Common Chest</span>
 							<label id="mond_chest_common-current">0</label>/<label id="mond_chest_common-max"></label>
 						</label>
 						<div class="mond_chest_common-option">
@@ -89,8 +90,9 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_exquisite-box-darkgreen">
 							<i class="fas fa-box"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 정교한 보물상자</span>
-							<label id="mond_chest_exquisite-current">0</label>/<label id="mond_chest_exquisite-max"></label>
+							<span>Mond - Exquisite Chest</span>
+							<label id="mond_chest_exquisite-current">0</label>/<label
+								id="mond_chest_exquisite-max"></label>
 						</label>
 						<div class="mond_chest_exquisite-option">
 							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
@@ -101,8 +103,9 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_precoius-box-darkblue">
 							<i class="fas fa-box"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 진귀한 보물상자</span>
-							<label id="mond_chest_precoius-current">0</label>/<label id="mond_chest_precoius-max"></label>
+							<span>Mond - Precoius Chest</span>
+							<label id="mond_chest_precoius-current">0</label>/<label
+								id="mond_chest_precoius-max"></label>
 						</label>
 						<div class="mond_chest_precoius-option">
 							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
@@ -113,8 +116,9 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_luxurious-box-orange">
 							<i class="fas fa-box"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 화려한 보물상자</span>
-							<label id="mond_chest_luxurious-current">0</label>/<label id="mond_chest_luxurious-max"></label>
+							<span>Mond - Luxurious Chest</span>
+							<label id="mond_chest_luxurious-current">0</label>/<label
+								id="mond_chest_luxurious-max"></label>
 						</label>
 						<div class="mond_chest_luxurious-option">
 							<!-- <label id="challenge-current-current">All</label> / <label id="challenge-current-max">Clear</label> -->
@@ -125,7 +129,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="liyue_chest_common-box-gray">
 							<i class="fas fa-box"></i>
 							<span class="checkmark"></span>
-							<span>리월 - 평범한 상자</span>
+							<span>liyue - Common Chest</span>
 							<label id="liyue_chest_common-current">0</label>/<label id="liyue_chest_common-max"></label>
 						</label>
 						<div class="liyue_chest_common-option">
@@ -145,7 +149,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="item_artifact-cannabis-pink">
 							<i class="fas fa-cannabis"></i>
 							<span class="checkmark"></span>
-							<span>일일성유물</span>
+							<span>Artifact</span>
 							<label id="item_artifact-current">0</label>/<label id="item_artifact-max"></label>
 						</label>
 						<div class="item_artifact-option">
@@ -157,7 +161,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_shrine-box-red">
 							<i class="fas fa-warehouse"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 지령감실</span>
+							<span>Mond - Shrine</span>
 							<label id="mond_shrine-current">0</label>/<label id="mond_shrine-max"></label>
 						</label>
 						<div class="mond_shrine-option">
@@ -169,7 +173,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="liyue_shrine-box-blue">
 							<i class="fas fa-warehouse"></i>
 							<span class="checkmark"></span>
-							<span>리월 - 지령감실</span>
+							<span>리월 - Shrine</span>
 							<label id="liyue_shrine-current">0</label>/<label id="liyue_shrine-max"></label>
 						</label>
 						<div class="liyue_shrine-option">
@@ -181,7 +185,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_challenge-stopwatch-gray">
 							<i class="fas fa-stopwatch" style="color:red"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 시련</span>
+							<span>Mond - Challenge</span>
 							<label id="mond_challenge-current">0</label>/<label id="mond_challenge-max"></label>
 						</label>
 						<div class="mond_challenge-option">
@@ -193,7 +197,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="liyue_challenge-stopwatch-gray">
 							<i class="fas fa-stopwatch" style="color:red"></i>
 							<span class="checkmark"></span>
-							<span>리월 - 시련</span>
+							<span>liyue - Challenge</span>
 							<label id="liyue_challenge-current">0</label>/<label id="liyue_challenge-max"></label>
 						</label>
 						<div class="liyue_challenge-option">
@@ -213,7 +217,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="mond_chest_seelie-meteor-red">
 							<i class="fas fa-warehouse"></i>
 							<span class="checkmark"></span>
-							<span>몬드 - 선령</span>
+							<span>Mond - Seelie</span>
 							<label id="mond_chest_seelie-current">0</label>/<label id="mond_chest_seelie-max"></label>
 						</label>
 						<div class="mond_chest_seelie-option">
@@ -225,7 +229,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="liyue_chest_seelie-meteor-blue">
 							<i class="fas fa-warehouse"></i>
 							<span class="checkmark"></span>
-							<span>리월 - 선령</span>
+							<span>liyue - Seelie</span>
 							<label id="liyue_chest_seelie-current">0</label>/<label id="liyue_chest_seelie-max"></label>
 						</label>
 						<div class="liyue_chest_seelie-option">
@@ -245,7 +249,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_ballon-feather-lightblue">
 							<i class="fas fa-feather" style="color:aqua"></i>
 							<span class="checkmark"></span>
-							<span>풍선</span>
+							<span>Ballon</span>
 							<label id="puzzle_ballon-current">0</label>/<label id="puzzle_ballon-max"></label>
 						</label>
 						<div class="puzzle_ballon-option">
@@ -257,7 +261,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_pinwheel-feather-darkgreen">
 							<i class="fas fa-wind" style="color:aqua"></i>
 							<span class="checkmark"></span>
-							<span>바람개비</span>
+							<span>Pinwheel</span>
 							<label id="puzzle_pinwheel-current">0</label>/<label id="puzzle_pinwheel-max"></label>
 						</label>
 						<div class="puzzle_pinwheel-option">
@@ -269,7 +273,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_kill-skull-darkred">
 							<i class="fas fa-skull" style="color:darkred"></i>
 							<span class="checkmark"></span>
-							<span>몬스터</span>
+							<span>Monster</span>
 							<label id="puzzle_kill-current">0</label>/<label id="puzzle_kill-max"></label>
 						</label>
 						<div class="puzzle_kill-option">
@@ -278,10 +282,11 @@
 					</div>
 					<div class="puzzle_stonetower checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_stonetower-gopuram-cadetblue">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="puzzle_stonetower-gopuram-cadetblue">
 							<i class="fas fa-gopuram" style="color:cadetblue"></i>
 							<span class="checkmark"></span>
-							<span>돌탑</span>
+							<span>Stonetower</span>
 							<label id="puzzle_stonetower-current">0</label>/<label id="puzzle_stonetower-max"></label>
 						</label>
 						<div class="puzzle_stonetower-option">
@@ -290,10 +295,11 @@
 					</div>
 					<div class="puzzle_targetboard checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_targetboard-crosshairs-darkblue">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="puzzle_targetboard-crosshairs-darkblue">
 							<i class="fas fa-crosshairs" style="color:darkblue"></i>
 							<span class="checkmark"></span>
-							<span>과녁판</span>
+							<span>Targetboard</span>
 							<label id="puzzle_targetboard-current">0</label>/<label id="puzzle_targetboard-max"></label>
 						</label>
 						<div class="puzzle_targetboard-option">
@@ -305,7 +311,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_bonfire-burn-red">
 							<i class="fas fa-burn" style="color:red"></i>
 							<span class="checkmark"></span>
-							<span>모닥불</span>
+							<span>Bonfire</span>
 							<label id="puzzle_bonfire-current">0</label>/<label id="puzzle_bonfire-max"></label>
 						</label>
 						<div class="puzzle_bonfire-option">
@@ -317,7 +323,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_press-bullseye-lightblue">
 							<i class="fas fa-bullseye"></i>
 							<span class="checkmark"></span>
-							<span>발판</span>
+							<span>Press</span>
 							<label id="puzzle_press-current">0</label>/<label id="puzzle_press-max"></label>
 						</label>
 						<div class="puzzle_press-option">
@@ -329,7 +335,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_water_totem-tint-blue">
 							<i class="fas fa-tint" style="color:blue"></i>
 							<span class="checkmark"></span>
-							<span>물 토템</span>
+							<span>Water Totem</span>
 							<label id="puzzle_water_totem-current">0</label>/<label id="puzzle_water_totem-max"></label>
 						</label>
 						<div class="puzzle_water_totem-option">
@@ -341,7 +347,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_fire_totem-burn-red">
 							<i class="fas fa-burn" style="color:red"></i>
 							<span class="checkmark"></span>
-							<span>화염 토템</span>
+							<span>Fire Totem</span>
 							<label id="puzzle_fire_totem-current">0</label>/<label id="puzzle_fire_totem-max"></label>
 						</label>
 						<div class="puzzle_fire_totem-option">
@@ -353,7 +359,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_elec_totem-bolt-purple">
 							<i class="fas fa-bolt" style="color:purple"></i>
 							<span class="checkmark"></span>
-							<span>번개 토템</span>
+							<span>Electro Totem</span>
 							<label id="puzzle_elec_totem-current">0</label>/<label id="puzzle_elec_totem-max"></label>
 						</label>
 						<div class="puzzle_elec_totem-option">
@@ -362,10 +368,11 @@
 					</div>
 					<div class="puzzle_cryo_totem checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="puzzle_cryo_totem-snowflake-lightblue">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="puzzle_cryo_totem-snowflake-lightblue">
 							<i class="fas fa-snowflake" style="color:lightblue"></i>
 							<span class="checkmark"></span>
-							<span>얼음 토템</span>
+							<span>Cryo totem</span>
 							<label id="puzzle_cryo_totem-current">0</label>/<label id="puzzle_cryo_totem-max"></label>
 						</label>
 						<div class="puzzle_cryo_totem-option">
@@ -385,7 +392,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="collection_book-book-purple">
 							<i class="fas fa-book" style="color:purple"></i>
 							<span class="checkmark"></span>
-							<span>책</span>
+							<span>Book</span>
 							<label id="collection_book-current">0</label>/<label id="collection_book-max"></label>
 						</label>
 						<div class="collection_book-option">
@@ -394,11 +401,13 @@
 					</div>
 					<div class="collection_geosigil checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="collection_geosigil-fingerprint-orange">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="collection_geosigil-fingerprint-orange">
 							<i class="fas fa-fingerprint" style="color:orange"></i>
 							<span class="checkmark"></span>
-							<span>바위의 인장</span>
-							<label id="collection_geosigil-current">0</label>/<label id="collection_geosigil-max"></label>
+							<span>Geo Sigil</span>
+							<label id="collection_geosigil-current">0</label>/<label
+								id="collection_geosigil-max"></label>
 						</label>
 						<div class="collection_geosigil-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
@@ -409,8 +418,9 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="collection_viewpoint-eye-purple">
 							<i class="fas fa-eye" style="color:purple"></i>
 							<span class="checkmark"></span>
-							<span>전망 포인트</span>
-							<label id="collection_viewpoint-current">0</label>/<label id="collection_viewpoint-max"></label>
+							<span>View Point</span>
+							<label id="collection_viewpoint-current">0</label>/<label
+								id="collection_viewpoint-max"></label>
 						</label>
 						<div class="collection_viewpoint-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
@@ -426,11 +436,13 @@
 				<div class="icon">
 					<div class="resources_windwheelaster checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="resources_windwheelaster-leaf-green">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="resources_windwheelaster-leaf-green">
 							<i class="fas fa-leaf"></i>
 							<span class="checkmark"></span>
-							<span>풍차 국화</span>
-							<label id="resources_windwheelaster-current">0</label>/<label id="resources_windwheelaster-max"></label>
+							<span>Windwheel aster</span>
+							<label id="resources_windwheelaster-current">0</label>/<label
+								id="resources_windwheelaster-max"></label>
 						</label>
 						<div class="resources_windwheelaster-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
@@ -440,11 +452,13 @@
 				<div class="icon">
 					<div class="resources_crystalcore checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="resources_crystalcore-gem-lightblue">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="resources_crystalcore-gem-lightblue">
 							<i class="fas fa-gem"></i>
 							<span class="checkmark"></span>
-							<span>수정 나비</span>
-							<label id="resources_crystalcore-current">0</label>/<label id="resources_crystalcore-max"></label>
+							<span>Crystal core</span>
+							<label id="resources_crystalcore-current">0</label>/<label
+								id="resources_crystalcore-max"></label>
 						</label>
 						<div class="resources_crystalcore-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
@@ -454,11 +468,13 @@
 				<div class="icon">
 					<div class="resources_noctilucousjade checkbox">
 						<label class="container" style="width: 100%">
-							<input class="icon-checkbox" type="checkbox" data-icon="resources_noctilucousjade-gem-purple">
+							<input class="icon-checkbox" type="checkbox"
+								data-icon="resources_noctilucousjade-gem-purple">
 							<i class="fas fa-gem"></i>
 							<span class="checkmark"></span>
-							<span>야박석</span>
-							<label id="resources_noctilucousjade-current">0</label>/<label id="resources_noctilucousjade-max"></label>
+							<span>Noctilucous jade</span>
+							<label id="resources_noctilucousjade-current">0</label>/<label
+								id="resources_noctilucousjade-max"></label>
 						</label>
 						<div class="resources_noctilucousjade-option">
 							<!-- <label id="collection_book-current">All</label> / <label id="collection_book-max">Clear</label> -->
@@ -477,7 +493,7 @@
 							<input class="icon-checkbox" type="checkbox" data-icon="npc_speed-running-blue">
 							<i class="fas fa-running" style="color:blue"></i>
 							<span class="checkmark"></span>
-							<span>시간제한 도전</span>
+							<span>Time run</span>
 							<label id="npc_speed-current">0</label>/<label id="npc_speed-max"></label>
 						</label>
 						<div class="npc_speed-option">
@@ -496,8 +512,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@1.6.0/Control.FullScreen.min.js"></script>
 	<script src="js/awesomemarkers.js"></script>
 	<script src="js/index.js"></script>
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-coordinates-control@1.0.2/src/L.Control.Coordinates.min.css">
-	<script>
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/leaflet-coordinates-control@1.0.2/src/L.Control.Coordinates.min.css">
+	<!-- <script>
 		L.Control.Coordinates = L.Control.extend({
 			options: {
 				position: 'bottomleft',
@@ -567,11 +584,11 @@
 					L.DomUtil.get(this._lng).innerHTML = '<strong>' + this.options.longitudeText + ':</strong> ' + obj.latlng.lng.toFixed(this.options.precision).toString();
 				}
 				var dummy = document.createElement("textarea");
-					document.body.appendChild(dummy);
-					dummy.value = `${obj.latlng.lat.toFixed(this.options.precision).toString()},${obj.latlng.lng.toFixed(this.options.precision).toString()}`;
-					dummy.select();
-					document.execCommand("copy");
-					document.body.removeChild(dummy);
+				document.body.appendChild(dummy);
+				dummy.value = `${obj.latlng.lat.toFixed(this.options.precision).toString()},${obj.latlng.lng.toFixed(this.options.precision).toString()}`;
+				dummy.select();
+				document.execCommand("copy");
+				document.body.removeChild(dummy);
 			}
 		});
 
